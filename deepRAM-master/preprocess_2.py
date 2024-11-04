@@ -54,10 +54,10 @@ def convert_format(parser):
                       
 def parse_arguments(parser):
 ## data
-    parser.add_argument('--CLIP_data', type=str, default=r'C:\Users\ranga\Documents\GitHub\D5-IBS-Project--Genome-Wide-Prediction-of-DNA-RNA\deepRAM-master\datasets\CLIP-seq\1_PARCLIP_AGO1234_hg19\30000\training_sample_0\sequences.fa.gz',
+    parser.add_argument('--CLIP_data', type=str, default=r'C:\Users\ranga\Documents\GitHub\D5-IBS-Project--Genome-Wide-Prediction-of-DNA-RNA\deepRAM-master\datasets\CLIP-seq\3_HITSCLIP_Ago2_binding_clusters\30000\training_sample_0\sequences.fa.gz',
                         help='path for CLIP-seq data ')
     
-    parser.add_argument('--output', type=str, default='1_pre_training_sample_0.gz',
+    parser.add_argument('--output', type=str, default='3_pre_training_sample_0.gz',
                         help='path for output file that matches format needed for deepRAM ')
 
     args = parser.parse_args()
