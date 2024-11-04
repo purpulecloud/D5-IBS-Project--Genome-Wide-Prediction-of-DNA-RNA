@@ -13,8 +13,8 @@ def preprocess_sequences(input_file, output_file):
 def main():
     # Argument parser for command line arguments
     parser = argparse.ArgumentParser(description='Preprocess CLIP-seq sequences')
-    parser.add_argument("C:\Users\ranga\Desktop\Sem-3\IBS\Project ISB\deepRAM-master\datasets\CLIP-seq\1_PARCLIP_AGO1234_hg19\30000" required=True, help='Directory containing CLIP-seq files')
-    parser.add_argument("C:\\Users\\ranga\\Desktop\\Sem-3\\IBS\\Project ISB\\deepRAM-master\\datasets\\CLIp-seq out", required=True, help='output Directory containing CLIP-seq files')
+    parser.add_argument(r"C:\Users\ranga\Desktop\Sem-3\IBS\Project ISB\deepRAM-master\datasets\CLIP-seq", required=True, help='Directory containing CLIP-seq files')
+    parser.add_argument(r"C:\Users\ranga\Desktop\Sem-3\IBS\Project ISB\deepRAM-master\datasets\CLIp-seq out", required=True, help='output Directory containing CLIP-seq files')
     
     args = parser.parse_args()
     
@@ -28,7 +28,7 @@ def main():
         
         for sample in ['test_sample_0', 'training_sample_0']:
             sample_path = os.path.join(folder_path, sample)
-            sequences_file = os.path.join(sample_path, 'sequences.fa')
+            sequences_file = os.path.join(sample_path, 'sequences.fa.gz')
             
             if os.path.exists(sequences_file):
                 output_file = os.path.join(args.output_directory, f"{folder_name}_{sample}_processed.gz")
